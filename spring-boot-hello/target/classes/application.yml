@@ -1,0 +1,33 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: hello
+  profiles:
+    active: dev
+
+
+# 自定义参数
+book:
+  name: SpringCloudAction
+  author: ZhaiYongChao
+  desc: ${book.author} is writing <<${book.name}>>
+
+info:
+  app:
+    name: spring-boot-hello
+    version: v1.0.0
+
+# 随机数
+blog:
+  value: ${random.value}
+  number: ${random.int}
+  bignumber: ${random.long}
+  test1: ${random.int(10)}
+  test2: ${random.long[10,20]}
+
+# 监控端口 安全访问
+management:
+  security:
+    enabled: false
