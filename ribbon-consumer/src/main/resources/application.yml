@@ -7,6 +7,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+# 不同region，不同zone的配置
+#      beijing: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+#    availability-zones:
+#      north: beijing,tianjing
+#      south: guangzhou,shenzhen
+#    region: north
   instance:
     hostname: localhost
     port: 1111
