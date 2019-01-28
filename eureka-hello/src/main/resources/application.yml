@@ -10,6 +10,7 @@ eureka:
   instance:
     hostname: localhost
     port: 1111
+    appname: @name@
 management:
   security:
     enabled: false
