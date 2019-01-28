@@ -1,0 +1,19 @@
+server:
+  port: 1111
+eureka:
+  instance:
+    hostname: localhost
+    port: 1112
+    appname: @name@
+  client:
+# 单eureka server时：
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+spring:
+  application:
+    name: @name@
+management:
+  security:
+    enabled: false
