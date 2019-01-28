@@ -1,0 +1,16 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: @name@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  instance:
+    hostname: localhost
+    port: 1111
+    appname: @name@
+management:
+  security:
+    enabled: false
